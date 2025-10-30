@@ -1,0 +1,23 @@
+/* Detail layout */
+.image-detail {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.image-detail h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+}
+
+.image-detail img {
+    max-width: 100%;
+    contain: layout;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}

@@ -1,0 +1,38 @@
+#root {
+    /*max-width: 1280px;*/
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.links {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-elev);
+    color: var(--text);
+    box-shadow: var(--shadow);
+}
+
+.links a[aria-current="page"] {
+    border-color: var(--brand);
+}
+
+::view-transition-old(image-expand):not(:only-child),
+::view-transition-new(image-expand):not(:only-child) {
+    animation: none;
+    mix-blend-mode: normal;
+}

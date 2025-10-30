@@ -1,0 +1,37 @@
+.flames-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  padding: 24px 24px 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+  gap: 4px;
+  margin-bottom: 24px;
+}
+.grid div {
+  opacity: 1;                  /* Always visible by default */
+  color: #fff;                 /* White plus sign by default */
+  font-size: 32px;
+  text-align: center;
+  border-radius: 10px;
+  user-select: none;
+  cursor: pointer;
+  line-height: 20px;
+  will-change: transform, opacity, color;
+  transform: translateZ(0);
+  contain: paint;
+  transition:
+          color 150ms ease,
+          opacity 150ms ease,
+          rotate 120ms ease;
+}
+
+.grid div:hover {
+  rotate: calc(var(--r, 0) * 90deg);
+  color: var(--flame, #d35400); /* Flame tone on hover */
+  opacity: var(--o);
+}
